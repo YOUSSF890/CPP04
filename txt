@@ -1,0 +1,15 @@
+Animal constructor called
+Dog constructor called
+Cat constructor called
+
+Dog
+Cat
+Meow meow!
+Woof woof!
+Some generic animal sound
+
+Animal destructor called
+Dog destructor called
+Animal destructor called
+Cat destructor called
+Animal destructor called
