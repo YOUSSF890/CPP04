@@ -7,8 +7,15 @@ class  Dog : public Animal
 {
     public:
         Dog();
-        Dog(Dog &obj);
-        Dog& operator=(Dog &obj);
+        Dog(const Dog &obj);
+        Dog& operator=(const Dog &obj);
+
+
+        void makeSound() override
+        {
+            std::cout << "Woof!\n";
+        }
+
         ~Dog();
 };
 

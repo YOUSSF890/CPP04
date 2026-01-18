@@ -7,8 +7,14 @@ class  Cat : public Animal
 {
     public:
         Cat();
-        Cat(Cat &obj);
-        Cat& operator=(Cat &obj);
+        Cat(const Cat &obj);
+        Cat& operator=(const Cat &obj);
+
+        void makeSound() override
+        {
+            std::cout << "Meow!\n";
+        }
+
         ~Cat();
 };
 

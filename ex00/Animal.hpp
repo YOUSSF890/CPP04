@@ -9,10 +9,15 @@ class  Animal
         std::string type;
     public:
         Animal();
-        Animal(Animal &obj);
-        Animal& operator=(Animal &obj);
+
+        virtual void makeSound()
+        {
+            std::cout << "Some generic animal sound\n";
+        }
+
+        Animal(const Animal &obj);
+        Animal& operator=(const Animal &obj);
         std::string getType() const;
-        // makeSound();
         ~Animal();
 };
 
