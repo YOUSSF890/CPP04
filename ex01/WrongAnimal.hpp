@@ -3,22 +3,22 @@
 
 #include <iostream>
 
-class  Animal
+class  WrongAnimal
 {
     protected:
         std::string type;
     public:
-        Animal();
+        WrongAnimal();
 
-        virtual void makeSound()
+        void makeSound()
         {
             std::cout << "Animal sound\n";
         }
 
-        Animal(const Animal &obj);
-        Animal& operator=(const Animal &obj);
+        WrongAnimal(const WrongAnimal &obj);
+        WrongAnimal& operator=(const WrongAnimal &obj);
         std::string getType() const;
-        virtual ~Animal();
+        ~WrongAnimal();
 };
 
 #endif
