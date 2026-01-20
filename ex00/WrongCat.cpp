@@ -2,22 +2,28 @@
 
 WrongCat::WrongCat()
 {
-    type = "WrongCat";
+    type = "WrongCat"; 
     std::cout << "WrongCat Default constructor called\n";
 }
 
-WrongCat::WrongCat(const WrongCat &obj)
+WrongCat::WrongCat(const WrongCat& other)
 {
+    this->type = other.type;
     std::cout << "WrongCat copy constructor called\n";
-    this->type = obj.type;
 }
 
-WrongCat& WrongCat::operator=(const WrongCat &obj)
+WrongCat& WrongCat::operator=(const WrongCat& other)
 {
-    this->type = obj.type;
+    this->type = other.type;
     std::cout << "WrongCat Copy assignment operator called\n";
     return (*this);
 }
+
+void WrongCat::makeSound()
+{
+    std::cout << "meow!!\n";
+}
+
 
 WrongCat::~WrongCat()
 {

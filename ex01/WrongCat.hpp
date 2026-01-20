@@ -1,21 +1,19 @@
 #ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#define WRONGCAT_HPP
 
 #include "WrongAnimal.hpp"
 
-class  WrongCat : public WrongAnimal
+
+class WrongCat : public WrongAnimal
 {
     public:
-        WrongCat();
-        WrongCat(const WrongCat &obj);
-        WrongCat& operator=(const WrongCat &obj);
+    WrongCat();
+    WrongCat(const WrongCat& other);
+    WrongCat& operator=(const WrongCat& other);
+    void makeSound();
+    ~WrongCat();
 
-        void makeSound()
-        {
-            std::cout << "Meow!\n";
-        }
-
-        ~WrongCat();
 };
+
 
 #endif

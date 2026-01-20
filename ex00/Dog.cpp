@@ -6,17 +6,22 @@ Dog::Dog()
     std::cout << "Dog Default constructor called\n";
 }
 
-Dog::Dog(const Dog &obj)
+Dog::Dog(const Dog& other)
 {
+    type = other.type;
     std::cout << "Dog copy constructor called\n";
-    this->type = obj.type;
 }
 
-Dog& Dog::operator=(const Dog &obj)
+Dog& Dog::operator=(const Dog& other)
 {
-    this->type = obj.type;
-    std::cout << "Dog Copy assignment operator called\n";
+    type = other.type;
+    std::cout << "Dog copy assignment operator called\n";
     return (*this);
+}
+
+void Dog::makeSound()
+{
+    std::cout << "woof!!\n";
 }
 
 Dog::~Dog()
