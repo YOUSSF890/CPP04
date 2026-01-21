@@ -5,20 +5,18 @@
 
 int main()
 {
-    // const Animal* j = new Dog();
-    // Animal* i = new Cat();
-    // Animal* a = new Cat();
+    Animal *obj0 = new Animal;
+    Animal *obj1 = new Cat();
 
-    Cat obj1;
-    Cat obj2(obj1);
+    WrongAnimal *obj3 = new WrongAnimal;
+    WrongAnimal *obj2 = new WrongCat();
 
+    obj0->makeSound();
+    obj1->makeSound();
 
-    obj1 = obj1;
+    obj2->makeSound();
+    obj2->makeSound();
 
-
-
-    // delete j;//should not create a leak
-    // delete i;
-    // delete a;
-    return 0;
+    
+    delete obj0;
 }

@@ -7,11 +7,11 @@
 class WrongCat : public WrongAnimal
 {
     public:
-    WrongCat();
-    WrongCat(const WrongCat& other);
-    WrongCat& operator=(const WrongCat& other);
-    void makeSound();
-    ~WrongCat();
+        WrongCat();
+        WrongCat(const WrongCat& other);
+        WrongCat& operator=(const WrongCat& other);
+        void makeSound() const;
+        ~WrongCat();
 
 };
 

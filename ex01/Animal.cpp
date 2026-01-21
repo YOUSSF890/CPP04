@@ -19,7 +19,12 @@ Animal& Animal::operator=(const Animal& other)
     return (*this);
 }
 
-void Animal::makeSound()
+std::string Animal::getType() const
+{
+    return (type);
+}
+
+void Animal::makeSound() const
 {
     std::cout << "sound\n";
 }
