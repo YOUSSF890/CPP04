@@ -15,5 +15,4 @@ class Dog : public Animal
         void makeSound() const;
         ~Dog();
 };
-
 #endif
