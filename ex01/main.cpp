@@ -5,18 +5,18 @@
 
 int main()
 {
-    Animal *obj0 = new Animal;
-    Animal *obj1 = new Cat();
+    // Animal *obj0 = new Animal;
+    // Animal *obj1 = new Cat();
 
-    WrongAnimal *obj3 = new WrongAnimal;
-    WrongAnimal *obj2 = new WrongCat();
+    // WrongAnimal *obj3 = new WrongAnimal;
+    // WrongAnimal *obj2 = new WrongCat();
 
-    obj0->makeSound();
-    obj1->makeSound();
+    // obj0->makeSound();
+    // obj1->makeSound();
 
-    obj2->makeSound();
-    obj2->makeSound();
+    // obj2->makeSound();
+    // obj2->makeSound();
 
     
-    delete obj0;
+    // delete obj0;
 }

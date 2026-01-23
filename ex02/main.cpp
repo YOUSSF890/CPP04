@@ -7,7 +7,7 @@ int main()
 {
     // Animal obj;
     // Animal *obj0 = new Animal;
-    Animal *obj1 = new Cat();
+    // Animal *obj1 = new Cat();
 
     // WrongAnimal *obj3 = new WrongAnimal;
     // WrongAnimal *obj2 = new WrongCat();
