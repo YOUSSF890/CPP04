@@ -14,7 +14,8 @@ WrongAnimal::WrongAnimal(const WrongAnimal& other)
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)
 {
-    type = other.type;
+    if (this != &other)
+        type = other.type;
     std::cout << "WrongAnimal copy assignment called\n";
     return (*this);
 }

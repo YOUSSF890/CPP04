@@ -1,22 +1,44 @@
 #include "Cat.hpp"
-#include "WrongCat.hpp"
-// #include "Dog.hpp"
+#include "Dog.hpp"
+
 
 
 int main()
 {
-    // Animal *obj0 = new Animal;
-    // Animal *obj1 = new Cat();
+    int SIZE = 10;
+    Animal* animals[SIZE];
+    for (int i = 0; i < SIZE; i++)
+    {
+        if (i < SIZE / 2)
+            animals[i] = new Dog();
+        else
+            animals[i] = new Cat();
+    }
 
-    // WrongAnimal *obj3 = new WrongAnimal;
-    // WrongAnimal *obj2 = new WrongCat();
+    for (int i = 0; i < SIZE; i++)
+    {
+        std::cout << animals[i]->getType() << "\n";
+        animals[i]->makeSound();
+    }
 
-    // obj0->makeSound();
-    // obj1->makeSound();
+    for (int i = 0; i < SIZE; i++)
+    {
+        delete animals[i];
+    }
 
-    // obj2->makeSound();
-    // obj2->makeSound();
+    std::cout << "\n---------------- copy constructor ----------------\n";
+    {
+        Dog a;
+        Dog b;        
+        a = b;
+    }
+    std::cout << "\n---------------------------------------------------\n";
+    {
+        const Animal* j = new Dog();
+        const Animal* i = new Cat();
 
-    
-    // delete obj0;
+        delete j;
+        delete i;
+    }
+
 }

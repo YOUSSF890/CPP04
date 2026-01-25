@@ -1,23 +1,19 @@
 #include "Cat.hpp"
-#include "WrongCat.hpp"
-// #include "Dog.hpp"
+#include "Dog.hpp"
 
 
 int main()
 {
-    // Animal obj;
-    // Animal *obj0 = new Animal;
-    // Animal *obj1 = new Cat();
+    // const Animal* meta = new Animal();error
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
 
-    // WrongAnimal *obj3 = new WrongAnimal;
-    // WrongAnimal *obj2 = new WrongCat();
+    std::cout << j->getType() << " " << std::endl;
+    std::cout << i->getType() << " " << std::endl;
+    i->makeSound();
+    j->makeSound();
 
-    // obj0->makeSound();
-    // obj1->makeSound();
 
-    // obj2->makeSound();
-    // obj2->makeSound();
-
-    
-    // delete obj0;
+    delete j;
+    delete i;
 }

@@ -1,6 +1,6 @@
 NAME = Animal
 CC = c++
-FLAGE = -Werror -Wextra -Wall -std=c++98
+FLAGS = -Werror -Wextra -Wall -std=c++98
 SRC = Animal.cpp Brain.cpp Cat.cpp Dog.cpp main.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ = $(SRC:%.cpp=%.o)
 HADER = Animal.hpp Brain.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
@@ -9,10 +9,10 @@ HADER = Animal.hpp Brain.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
 all:$(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGE) $(OBJ) -o $(NAME)
+	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 %.o:%.cpp $(HADER)
-	$(CC) $(FLAGE) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ)
